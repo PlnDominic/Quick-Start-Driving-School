@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Merriweather+Sans:wght@400;500;700;800&family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  h1, h2, h3, h4 { margin: 0; }
+  p { margin: 0; }
+  a { text-decoration: none; color: inherit; }
+  input, select, textarea, button { font-family: inherit; }
+  .qs-navlink:hover { opacity: .68; }
+  .qs-card-hover { transition: transform .25s cubic-bezier(.25,.1,.25,1), box-shadow .3s cubic-bezier(.25,.1,.25,1); }
+  .qs-card-hover:hover { transform: translateY(-4px); box-shadow: 0 22px 44px -28px rgba(70,40,30,.45); }
+  .qs-btn { transition: background .25s ease, transform .25s ease, opacity .25s ease; }
+  .qs-btn:hover { transform: translateY(-2px); }
+  .qs-imgzoom { transition: transform .6s cubic-bezier(.25,.1,.25,1); }
+  .qs-imgwrap:hover .qs-imgzoom { transform: scale(1.04); }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Assistant',sans-serif;color:#16181f;background:#fff;line-height:1.65">
+
+  <!-- ============ HEADER ============ -->
+  <header style="position:sticky;top:0;z-index:50;background:#46281e;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(20px,5vw,64px);height:74px">
+    <a href="Quick Start Driving School.dc.html" style="display:flex;align-items:center;gap:11px">
+      <span style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#cc4f2b;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:16px">Q</span>
+      <span>
+        <span style="display:block;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:19px;letter-spacing:.04em;line-height:1">Quick Start</span>
+        <span style="display:block;font-family:'Anonymous Pro',monospace;font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;opacity:.82;margin-top:3px">Driving School · Kumasi</span>
+      </span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:30px;font-size:14.5px;letter-spacing:.02em">
+      <a class="qs-navlink" href="Quick Start Driving School.dc.html" style="transition:opacity .25s">Home</a>
+      <a class="qs-navlink" href="Courses.dc.html" style="transition:opacity .25s">Courses</a>
+      <a class="qs-navlink" href="About.dc.html" style="transition:opacity .25s">About</a>
+      <a class="qs-navlink" href="#reviews" style="transition:opacity .25s">Reviews</a>
+      <a class="qs-navlink" href="Contact.dc.html" style="transition:opacity .25s">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:18px">
+      <a href="tel:0233080020" style="font-family:'Anonymous Pro',monospace;font-size:13px;letter-spacing:.08em;opacity:.9">023 308 0020</a>
+      <a class="qs-btn" href="#contact" style="background:#cc4f2b;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 20px">Book a lesson</a>
+    </div>
+  </header>
+
+  <!-- ============ HERO (split) ============ -->
+  <section style="display:grid;grid-template-columns:1.05fr 1fr;min-height:620px">
+    <div style="background:#faf8f4;padding:clamp(40px,5vw,68px) clamp(28px,4.5vw,64px);display:flex;flex-direction:column;justify-content:center">
+      <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#cc4f2b">Kumasi · Ghana</div>
+      <h1 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(40px,5vw,58px);line-height:1.04;letter-spacing:.01em;margin-top:18px;color:#46281e;max-width:14ch">Your road to a full license starts here.</h1>
+      <p style="font-size:18px;line-height:1.65;margin-top:22px;max-width:44ch;color:#4c515d">A renowned learning centre for new drivers — patient instruction, intensive courses and full DVLA license registration, all on a schedule that fits your life.</p>
+      <div style="display:flex;align-items:center;gap:20px;margin-top:32px;flex-wrap:wrap">
+        <a class="qs-btn" href="#contact" style="background:#46281e;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px">Enroll now</a>
+        <a href="Courses.dc.html" style="font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#16181f;border-bottom:1.5px solid #cc4f2b;padding-bottom:4px">View courses</a>
+      </div>
+      <div style="margin-top:44px;padding-top:24px;border-top:1px solid #e7e5e0;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:#8a8e98">Call to book</div>
+          <div style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:21px;color:#16181f;margin-top:4px">023 308 0020</div>
+        </div>
+        <div style="text-align:right">
+          <div style="color:#cc4f2b;letter-spacing:2px;font-size:16px">★★★★<span style="opacity:.3">★</span></div>
+          <div style="font-size:13px;color:#4c515d;margin-top:3px">4.0 · 33 Google reviews</div>
+        </div>
+      </div>
+    </div>
+    <div class="qs-imgwrap" style="position:relative;overflow:hidden;min-height:420px;background:#e7ddcf">
+      <image-slot id="qsHomeHero" placeholder="Drop a learner / car photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+    </div>
+  </section>
+
+  <!-- ============ TRUST STRIP ============ -->
+  <div style="background:#46281e;color:#fff;display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:clamp(28px,5vw,72px);padding:26px clamp(20px,5vw,64px)">
+    <div style="display:flex;align-items:center;gap:11px"><span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:20px;color:#e8915f">4.0★</span><span style="font-size:13.5px;opacity:.85">33 reviews</span></div>
+    <div style="width:1px;height:26px;background:rgba(255,255,255,.18)"></div>
+    <div style="display:flex;align-items:center;gap:11px"><span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:20px;color:#e8915f">DVLA</span><span style="font-size:13.5px;opacity:.85">license registration</span></div>
+    <div style="width:1px;height:26px;background:rgba(255,255,255,.18)"></div>
+    <div style="display:flex;align-items:center;gap:11px"><span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:20px;color:#e8915f">Flexible</span><span style="font-size:13.5px;opacity:.85">schedules</span></div>
+    <div style="width:1px;height:26px;background:rgba(255,255,255,.18)"></div>
+    <div style="display:flex;align-items:center;gap:11px"><span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:20px;color:#e8915f">Years</span><span style="font-size:13.5px;opacity:.85">of trusted tuition</span></div>
+  </div>
+
+  <!-- ============ WHY US — "Are you ready?" ============ -->
+  <section style="background:#fff;padding:clamp(64px,9vh,108px) clamp(20px,5vw,64px)">
+    <div style="max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:center">
+
+      <!-- left: image with road-sign accents -->
+      <div style="position:relative">
+        <div class="qs-imgwrap" style="position:relative;overflow:hidden;border-radius:16px;aspect-ratio:4/3;background:#e7ddcf">
+          <image-slot id="qsReadyImg" placeholder="Drop a car / learner photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+        </div>
+        <div style="position:absolute;top:-20px;left:-16px;width:58px;height:58px;background:#f4c430;border:3px solid #16181f;border-radius:9px;transform:rotate(45deg);display:grid;place-items:center;box-shadow:0 10px 24px -10px rgba(0,0,0,.4)">
+          <span style="transform:rotate(-45deg);font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:26px;color:#16181f;line-height:1">!</span>
+        </div>
+        <div style="position:absolute;bottom:-14px;right:18px;width:0;height:0;border-left:20px solid transparent;border-right:20px solid transparent;border-bottom:34px solid #cc4f2b;filter:drop-shadow(0 8px 14px rgba(0,0,0,.25))"></div>
+      </div>
+
+      <!-- right: copy + checklist -->
+      <div>
+        <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#cc4f2b">Why Quick Start</div>
+        <h2 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(30px,3.8vw,44px);line-height:1.08;margin-top:14px;color:#46281e">Are you ready to drive?</h2>
+        <p style="font-size:16px;color:#4c515d;margin-top:18px;max-width:50ch">For years, Quick Start Driving School has earned a reputation across Kumasi for responsible, caring tuition. With patient, licensed instructors and a relaxed, encouraging environment, you'll start your driving lessons and learn to drive with real confidence.</p>
+
+        <div style="display:flex;flex-direction:column;gap:14px;margin-top:28px">
+          <div style="display:flex;align-items:flex-start;gap:13px">
+            <span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#cc4f2b;color:#fff;display:grid;place-items:center;font-size:13px;margin-top:1px">✓</span>
+            <span style="font-size:15.5px;color:#16181f">We cover all the different test routes</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:13px">
+            <span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#cc4f2b;color:#fff;display:grid;place-items:center;font-size:13px;margin-top:1px">✓</span>
+            <span style="font-size:15.5px;color:#16181f">Flexible schedules — more than just lessons on offer</span>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:13px">
+            <span style="flex-shrink:0;width:24px;height:24px;border-radius:50%;background:#cc4f2b;color:#fff;display:grid;place-items:center;font-size:13px;margin-top:1px">✓</span>
+            <span style="font-size:15.5px;color:#16181f">Full DVLA license registration handled for you</span>
+          </div>
+        </div>
+
+        <a class="qs-btn" href="#contact" style="display:inline-block;margin-top:30px;background:#46281e;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:15px 30px">Enroll now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SCHEDULE BAND ============ -->
+  <section style="position:relative;background:#341a12;color:#fff;padding:clamp(34px,5vh,52px) clamp(20px,5vw,64px);overflow:hidden">
+    <div style="max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:clamp(24px,4vw,56px);flex-wrap:wrap;text-align:center">
+      <div>
+        <div style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(22px,2.6vw,30px);letter-spacing:.01em">Schedule <span style="color:#e8915f">Your Driving Lessons</span> with Us!</div>
+        <div style="font-size:14px;color:rgba(255,255,255,.65);margin-top:8px">Book a taster lesson and meet your personal driving instructor.</div>
+        <div style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);color:#fff;margin-top:14px;letter-spacing:.02em">023 308 0020</div>
+      </div>
+      <div style="position:relative;width:74px;height:64px;flex-shrink:0">
+        <div style="width:0;height:0;border-left:37px solid transparent;border-right:37px solid transparent;border-bottom:64px solid #f4c430"></div>
+        <span style="position:absolute;left:50%;bottom:8px;transform:translateX(-50%);font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:26px;color:#16181f">!</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ COURSES ============ -->
+  <section id="courses" style="background:#faf8f4;padding:clamp(64px,9vh,108px) clamp(20px,5vw,64px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap">
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#cc4f2b">Our courses</div>
+          <h2 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);line-height:1.1;margin-top:14px;color:#46281e">Packages for every kind of driver</h2>
+        </div>
+        <a href="Courses.dc.html" style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:#4c515d;border-bottom:1.5px solid #cc4f2b;padding-bottom:4px;white-space:nowrap">All courses →</a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:clamp(18px,2vw,26px);margin-top:clamp(36px,5vh,52px)">
+
+        <div class="qs-card-hover" style="background:#fff;border:1px solid #e7e5e0;padding:30px 28px;display:flex;flex-direction:column">
+          <div style="font-family:'Anonymous Pro',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#cc4f2b">Beginner</div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:21px;margin-top:12px;color:#16181f">Driving Lessons</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:12px">Foundational, on-road tuition for first-time drivers — controls, handling and confidence from day one.</p>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:#4c515d">
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Vehicle controls &amp; road handling</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Real on-road practice</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Theory test preparation</li>
+          </ul>
+          <a class="qs-btn" href="#contact" style="margin-top:auto;padding-top:22px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#46281e;font-weight:600">Enquire →</a>
+        </div>
+
+        <div class="qs-card-hover" style="background:#46281e;color:#fff;border:1px solid #46281e;padding:30px 28px;display:flex;flex-direction:column">
+          <div style="font-family:'Anonymous Pro',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#e8915f">Most popular</div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:21px;margin-top:12px">Intensive Course</h3>
+          <p style="font-size:14.5px;color:rgba(255,255,255,.82);margin-top:12px">Fast-track to test-ready in weeks with daily sessions and a structured path to your test.</p>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:rgba(255,255,255,.82)">
+            <li style="display:flex;gap:9px"><span style="color:#e8915f">—</span>Daily condensed sessions</li>
+            <li style="display:flex;gap:9px"><span style="color:#e8915f">—</span>Mock tests included</li>
+            <li style="display:flex;gap:9px"><span style="color:#e8915f">—</span>Test booking assistance</li>
+          </ul>
+          <a class="qs-btn" href="#contact" style="margin-top:auto;padding-top:22px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#e8915f;font-weight:600">Enquire →</a>
+        </div>
+
+        <div class="qs-card-hover" style="background:#fff;border:1px solid #e7e5e0;padding:30px 28px;display:flex;flex-direction:column">
+          <div style="font-family:'Anonymous Pro',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#cc4f2b">Private</div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:21px;margin-top:12px;color:#16181f">Exclusive Lessons</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:12px">One-to-one tuition at your own pace, with hours and pickup points chosen around you.</p>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:#4c515d">
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Dedicated private instructor</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Choose your own hours</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Door pickup available</li>
+          </ul>
+          <a class="qs-btn" href="#contact" style="margin-top:auto;padding-top:22px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#46281e;font-weight:600">Enquire →</a>
+        </div>
+
+        <div class="qs-card-hover" style="background:#fff;border:1px solid #e7e5e0;padding:30px 28px;display:flex;flex-direction:column">
+          <div style="font-family:'Anonymous Pro',monospace;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#cc4f2b">Licensing</div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:21px;margin-top:12px;color:#16181f">License Registration</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:12px">Full assistance registering your driver's license with the DVLA — from paperwork to follow-up.</p>
+          <ul style="list-style:none;padding:0;margin:18px 0 0;display:flex;flex-direction:column;gap:8px;font-size:14px;color:#4c515d">
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Paperwork handled for you</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Theory &amp; practical booking</li>
+            <li style="display:flex;gap:9px"><span style="color:#cc4f2b">—</span>Guidance to collection</li>
+          </ul>
+          <a class="qs-btn" href="#contact" style="margin-top:auto;padding-top:22px;font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:#46281e;font-weight:600">Enquire →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ REVIEWS ============ -->
+  <section id="reviews" style="background:#fff;padding:clamp(64px,9vh,108px) clamp(20px,5vw,64px)">
+    <div style="max-width:1200px;margin:0 auto;display:grid;grid-template-columns:0.8fr 2fr;gap:clamp(36px,5vw,72px);align-items:start">
+
+      <div>
+        <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#cc4f2b">Reviews</div>
+        <div style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:68px;line-height:1;color:#46281e;margin-top:16px">4.0</div>
+        <div style="color:#cc4f2b;letter-spacing:3px;font-size:20px;margin-top:10px">★★★★<span style="opacity:.3">★</span></div>
+        <p style="font-size:15px;color:#4c515d;margin-top:12px">Based on 33 verified Google reviews from learners across Kumasi.</p>
+        <a class="qs-btn" href="#contact" style="display:inline-block;margin-top:22px;background:#cc4f2b;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 22px">Become our next review</a>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(18px,2vw,24px)">
+        <div style="background:#faf8f4;border:1px solid #e7e5e0;padding:26px 24px;display:flex;flex-direction:column">
+          <div style="color:#cc4f2b;letter-spacing:2px;font-size:14px">★★★★★</div>
+          <p style="font-size:14.5px;color:#16181f;margin-top:14px;flex:1">"A renowned learning centre for amateur drivers — driving licenses, lessons, intensive and exclusive courses, with flexible schedules for customers."</p>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid #e7e5e0">
+            <div style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:15px;color:#16181f">Felix Acheampong</div>
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.1em;color:#8a8e98;margin-top:3px">Local Guide · Google review</div>
+          </div>
+        </div>
+        <div style="background:#faf8f4;border:1px solid #e7e5e0;padding:26px 24px;display:flex;flex-direction:column">
+          <div style="color:#cc4f2b;letter-spacing:2px;font-size:14px">★★★★<span style="opacity:.3">★</span></div>
+          <p style="font-size:14.5px;color:#16181f;margin-top:14px;flex:1">"A driving school at a vantage point for university students who want to learn to drive. They assist with DVLA license registration and tuition as well."</p>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid #e7e5e0">
+            <div style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:15px;color:#16181f">Michael Affare</div>
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.1em;color:#8a8e98;margin-top:3px">Local Guide · Google review</div>
+          </div>
+        </div>
+        <div style="background:#faf8f4;border:1px solid #e7e5e0;padding:26px 24px;display:flex;flex-direction:column">
+          <div style="color:#cc4f2b;letter-spacing:2px;font-size:14px">★★★★★</div>
+          <p style="font-size:14.5px;color:#16181f;margin-top:14px;flex:1">"I had my driving lessons and license with Quick Start. They are so good and delivered on time. I recommend this school."</p>
+          <div style="margin-top:18px;padding-top:16px;border-top:1px solid #e7e5e0">
+            <div style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:15px;color:#16181f">Victoria Ashley</div>
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.1em;color:#8a8e98;margin-top:3px">Google review</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENROLLMENT / CONTACT ============ -->
+  <section id="contact" style="background:#46281e;color:#fff;padding:clamp(64px,9vh,108px) clamp(20px,5vw,64px)">
+    <div style="max-width:1140px;margin:0 auto;display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(36px,5vw,72px);align-items:start">
+
+      <div>
+        <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#e8915f">Enroll today</div>
+        <h2 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,42px);line-height:1.1;margin-top:14px;max-width:14ch">Book your first lesson.</h2>
+        <p style="font-size:16px;color:rgba(255,255,255,.8);margin-top:18px;max-width:42ch">Tell us a little about yourself and the course you're after. We'll call you back to confirm a time that suits you.</p>
+
+        <div style="margin-top:40px;display:flex;flex-direction:column;gap:24px">
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#e8915f;width:74px;flex-shrink:0;padding-top:3px">Call</div>
+            <div style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:18px">023 308 0020</div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#e8915f;width:74px;flex-shrink:0;padding-top:3px">Visit</div>
+            <div style="font-size:15px;color:rgba(255,255,255,.88)">Kumasi, Ghana<br /><span style="font-family:'Anonymous Pro',monospace;font-size:12.5px;color:rgba(255,255,255,.6)">Plus code MCGP+6H</span></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="font-family:'Anonymous Pro',monospace;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#e8915f;width:74px;flex-shrink:0;padding-top:3px">Hours</div>
+            <div style="font-size:15px;color:rgba(255,255,255,.88)">Open daily · Closes 5 pm</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="background:#fff;padding:clamp(26px,3vw,38px)">
+        <sc-if value="{{ submitted }}" hint-placeholder-val="{{ false }}">
+          <div style="display:flex;flex-direction:column;align-items:center;text-align:center;padding:40px 10px">
+            <div style="width:54px;height:54px;border-radius:50%;background:#cc4f2b;color:#fff;display:grid;place-items:center;font-size:26px">✓</div>
+            <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:24px;color:#46281e;margin-top:20px">Thank you!</h3>
+            <p style="font-size:15px;color:#4c515d;margin-top:10px;max-width:34ch">Your enrolment request is in. We'll call you on the number you gave to confirm your first lesson.</p>
+            <button class="qs-btn" onClick="{{ reset }}" style="margin-top:24px;background:#46281e;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:13px 24px;cursor:pointer">Send another</button>
+          </div>
+        </sc-if>
+        <sc-if value="{{ notSubmitted }}" hint-placeholder-val="{{ true }}">
+          <div style="display:flex;flex-direction:column;gap:16px">
+            <div>
+              <label style="display:block;font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8e98;margin-bottom:7px">Full name</label>
+              <input value="{{ name }}" onInput="{{ onName }}" placeholder="e.g. Ama Mensah" style="width:100%;padding:13px 14px;border:1px solid #d9d6cf;background:#faf8f4;font-size:15px;color:#16181f;outline:none" />
+            </div>
+            <div style="display:flex;gap:14px;flex-wrap:wrap">
+              <div style="flex:1;min-width:150px">
+                <label style="display:block;font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8e98;margin-bottom:7px">Phone</label>
+                <input value="{{ phone }}" onInput="{{ onPhone }}" placeholder="024 000 0000" style="width:100%;padding:13px 14px;border:1px solid #d9d6cf;background:#faf8f4;font-size:15px;color:#16181f;outline:none" />
+              </div>
+              <div style="flex:1;min-width:150px">
+                <label style="display:block;font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8e98;margin-bottom:7px">Course</label>
+                <select value="{{ course }}" onChange="{{ onCourse }}" style="width:100%;padding:13px 14px;border:1px solid #d9d6cf;background:#faf8f4;font-size:15px;color:#16181f;outline:none">
+                  <option>Driving Lessons</option>
+                  <option>Intensive Course</option>
+                  <option>Exclusive Lessons</option>
+                  <option>License Registration</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label style="display:block;font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8e98;margin-bottom:7px">Preferred schedule</label>
+              <select value="{{ schedule }}" onChange="{{ onSchedule }}" style="width:100%;padding:13px 14px;border:1px solid #d9d6cf;background:#faf8f4;font-size:15px;color:#16181f;outline:none">
+                <option>Weekday mornings</option>
+                <option>Weekday evenings</option>
+                <option>Weekends</option>
+                <option>Flexible / anytime</option>
+              </select>
+            </div>
+            <div>
+              <label style="display:block;font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:#8a8e98;margin-bottom:7px">Message <span style="text-transform:none;letter-spacing:0">(optional)</span></label>
+              <textarea value="{{ message }}" onInput="{{ onMessage }}" rows="3" placeholder="Anything we should know?" style="width:100%;padding:13px 14px;border:1px solid #d9d6cf;background:#faf8f4;font-size:15px;color:#16181f;outline:none;resize:vertical"></textarea>
+            </div>
+            <button class="qs-btn" onClick="{{ onSubmit }}" style="margin-top:4px;background:#cc4f2b;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px;cursor:pointer;width:100%">Request my lesson</button>
+            <p style="font-size:12px;color:#8a8e98;text-align:center">We'll only use your details to arrange your lessons.</p>
+          </div>
+        </sc-if>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FOOTER ============ -->
+  <footer style="background:#341a12;color:rgba(255,255,255,.78);padding:clamp(48px,7vh,72px) clamp(20px,5vw,64px) 28px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
+      <div style="max-width:30ch">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#cc4f2b;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px">Q</span>
+          <span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;color:#fff">Quick Start</span>
+        </div>
+        <p style="font-size:14px;margin-top:16px">Kumasi's renowned driving school for new drivers — lessons, intensive courses and full DVLA license registration.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,6vw,72px)">
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#e8915f;margin-bottom:14px">Explore</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <a href="Quick Start Driving School.dc.html" style="opacity:.82">Home</a>
+            <a href="Courses.dc.html" style="opacity:.82">Courses</a>
+            <a href="About.dc.html" style="opacity:.82">About</a>
+            <a href="Contact.dc.html" style="opacity:.82">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#e8915f;margin-bottom:14px">Get in touch</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <a href="tel:0233080020" style="opacity:.82">023 308 0020</a>
+            <span style="opacity:.82">Kumasi · MCGP+6H</span>
+            <span style="opacity:.82">Open daily · Closes 5 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:'Anonymous Pro',monospace;font-size:11.5px;letter-spacing:.08em;color:rgba(255,255,255,.5)">
+      <span>© 2026 Quick Start Driving School · Kumasi, Ghana</span>
+      <span>4.0 ★ · 33 Google reviews</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = {
+    submitted: false,
+    name: "", phone: "", email: "",
+    course: "Driving Lessons",
+    schedule: "Weekday mornings",
+    message: ""
+  };
+  renderVals() {
+    const set = (k) => (e) => this.setState({ [k]: e.target.value });
+    return {
+      submitted: this.state.submitted,
+      notSubmitted: !this.state.submitted,
+      name: this.state.name,
+      phone: this.state.phone,
+      course: this.state.course,
+      schedule: this.state.schedule,
+      message: this.state.message,
+      onName: set("name"),
+      onPhone: set("phone"),
+      onCourse: set("course"),
+      onSchedule: set("schedule"),
+      onMessage: set("message"),
+      onSubmit: () => this.setState({ submitted: true }),
+      reset: () => this.setState({ submitted: false, name: "", phone: "", message: "" })
+    };
+  }
+}
+</script>
+</body>
+</html>

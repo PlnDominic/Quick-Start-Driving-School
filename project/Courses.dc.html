@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700&family=Merriweather+Sans:wght@400;500;700;800&family=Anonymous+Pro:wght@400;700&display=swap" rel="stylesheet" />
+<style>
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { margin: 0; }
+  h1,h2,h3,h4 { margin: 0; }
+  p { margin: 0; }
+  a { text-decoration: none; color: inherit; }
+  .qs-navlink:hover { opacity: .68; }
+  .qs-btn { transition: background .25s ease, transform .25s ease, opacity .25s ease, color .25s ease; }
+  .qs-btn:hover { transform: translateY(-2px); }
+  .qs-imgzoom { transition: transform .6s cubic-bezier(.25,.1,.25,1); }
+  .qs-card:hover .qs-imgzoom { transform: scale(1.05); }
+  .qs-track { scrollbar-width: none; -ms-overflow-style: none; }
+  .qs-track::-webkit-scrollbar { display: none; }
+  .qs-arrow:hover { background: #cc4f2b; color: #fff; border-color: #cc4f2b; }
+  .qs-moreinfo:hover { background: #46281e; color: #fff; border-color: #46281e; }
+</style>
+<script src="./image-slot.js"></script>
+</helmet>
+
+<div style="font-family:'Assistant',sans-serif;color:#16181f;background:#fff;line-height:1.65">
+
+  <header style="position:sticky;top:0;z-index:50;background:#46281e;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:0 clamp(20px,5vw,64px);height:74px">
+    <a href="Quick Start Driving School.dc.html" style="display:flex;align-items:center;gap:11px">
+      <span style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:#cc4f2b;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:16px">Q</span>
+      <span>
+        <span style="display:block;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:19px;letter-spacing:.04em;line-height:1">Quick Start</span>
+        <span style="display:block;font-family:'Anonymous Pro',monospace;font-size:8.5px;letter-spacing:.32em;text-transform:uppercase;opacity:.82;margin-top:3px">Driving School · Kumasi</span>
+      </span>
+    </a>
+    <nav style="display:flex;align-items:center;gap:30px;font-size:14.5px;letter-spacing:.02em">
+      <a class="qs-navlink" href="Quick Start Driving School.dc.html" style="transition:opacity .25s">Home</a>
+      <a class="qs-navlink" href="Courses.dc.html" style="opacity:.6;border-bottom:1.5px solid #cc4f2b;padding-bottom:3px">Courses</a>
+      <a class="qs-navlink" href="About.dc.html" style="transition:opacity .25s">About</a>
+      <a class="qs-navlink" href="Contact.dc.html" style="transition:opacity .25s">Contact</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:18px">
+      <a href="tel:0233080020" style="font-family:'Anonymous Pro',monospace;font-size:13px;letter-spacing:.08em;opacity:.9">023 308 0020</a>
+      <a class="qs-btn" href="Contact.dc.html" style="background:#cc4f2b;color:#fff;font-size:12.5px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;padding:12px 20px">Book a lesson</a>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section style="background:#faf8f4;padding:clamp(56px,8vh,96px) clamp(20px,5vw,64px)">
+    <div style="max-width:1200px;margin:0 auto">
+      <div style="font-family:'Anonymous Pro',monospace;font-size:12px;letter-spacing:.24em;text-transform:uppercase;color:#cc4f2b">Our courses</div>
+      <h1 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(36px,5vw,56px);line-height:1.05;margin-top:16px;color:#46281e;max-width:18ch">Pick the path that fits your pace.</h1>
+      <p style="font-size:18px;color:#4c515d;margin-top:20px;max-width:54ch">From a first time behind the wheel to a full DVLA license, every Quick Start package comes with patient instruction and a flexible schedule.</p>
+    </div>
+  </section>
+
+  <!-- OUR PROGRAMS CAROUSEL -->
+  <section style="background:#fff;padding:clamp(56px,8vh,96px) clamp(20px,5vw,64px)">
+    <h2 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(28px,3.6vw,40px);color:#16181f;text-align:center">Our Programs</h2>
+    <div style="width:54px;height:3px;background:#cc4f2b;margin:16px auto 0"></div>
+
+    <div style="position:relative;max-width:1200px;margin:clamp(30px,4vh,46px) auto 0">
+      <button class="qs-arrow qs-btn" onClick="{{ prev }}" aria-label="Previous" style="position:absolute;left:-6px;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #d9d6cf;color:#46281e;font-size:22px;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -12px rgba(0,0,0,.35)">‹</button>
+      <button class="qs-arrow qs-btn" onClick="{{ next }}" aria-label="Next" style="position:absolute;right:-6px;top:50%;transform:translateY(-50%);z-index:3;width:46px;height:46px;border-radius:50%;background:#fff;border:1px solid #d9d6cf;color:#46281e;font-size:22px;line-height:1;display:grid;place-items:center;cursor:pointer;box-shadow:0 8px 20px -12px rgba(0,0,0,.35)">›</button>
+
+      <div ref="{{ trackRef }}" class="qs-track" style="display:flex;gap:clamp(20px,2.4vw,30px);overflow-x:auto;scroll-snap-type:x mandatory;padding:34px 40px 12px">
+
+        <div class="qs-card" style="flex:0 0 clamp(240px,28vw,300px);scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e7ddcf;border:1px solid #e7e5e0">
+            <image-slot id="qsCourse1" placeholder="Drop a lesson photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+            <div style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:50px;height:50px;border-radius:50%;background:#cc4f2b;border:3px solid #fff;display:grid;place-items:center;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px;z-index:2;box-shadow:0 8px 18px -8px rgba(0,0,0,.4)">01</div>
+          </div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:20px;color:#16181f;margin-top:36px">Driving Lessons</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:10px;max-width:30ch">Foundational on-road tuition for first-time drivers — controls, handling and theory prep.</p>
+          <a class="qs-moreinfo qs-btn" href="Contact.dc.html" style="margin-top:18px;border:1px solid #d9d6cf;color:#46281e;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px">More info</a>
+        </div>
+
+        <div class="qs-card" style="flex:0 0 clamp(240px,28vw,300px);scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e7ddcf;border:1px solid #e7e5e0">
+            <image-slot id="qsCourse2" placeholder="Drop an intensive-course photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+            <div style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:50px;height:50px;border-radius:50%;background:#cc4f2b;border:3px solid #fff;display:grid;place-items:center;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px;z-index:2;box-shadow:0 8px 18px -8px rgba(0,0,0,.4)">02</div>
+          </div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:20px;color:#16181f;margin-top:36px">Intensive Course</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:10px;max-width:30ch">Fast-track, daily sessions that take you from learner to test-ready in weeks.</p>
+          <a class="qs-moreinfo qs-btn" href="Contact.dc.html" style="margin-top:18px;border:1px solid #d9d6cf;color:#46281e;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px">More info</a>
+        </div>
+
+        <div class="qs-card" style="flex:0 0 clamp(240px,28vw,300px);scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e7ddcf;border:1px solid #e7e5e0">
+            <image-slot id="qsCourse3" placeholder="Drop a private-lesson photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+            <div style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:50px;height:50px;border-radius:50%;background:#cc4f2b;border:3px solid #fff;display:grid;place-items:center;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px;z-index:2;box-shadow:0 8px 18px -8px rgba(0,0,0,.4)">03</div>
+          </div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:20px;color:#16181f;margin-top:36px">Exclusive Lessons</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:10px;max-width:30ch">One-to-one tuition at your own pace, with your own hours and door pickup.</p>
+          <a class="qs-moreinfo qs-btn" href="Contact.dc.html" style="margin-top:18px;border:1px solid #d9d6cf;color:#46281e;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px">More info</a>
+        </div>
+
+        <div class="qs-card" style="flex:0 0 clamp(240px,28vw,300px);scroll-snap-align:center;display:flex;flex-direction:column;align-items:center;text-align:center">
+          <div style="position:relative;width:100%;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e7ddcf;border:1px solid #e7e5e0">
+            <image-slot id="qsCourse4" placeholder="Drop a license / DVLA photo" class="qs-imgzoom" style="width:100%;height:100%;position:absolute;inset:0"></image-slot>
+            <div style="position:absolute;left:50%;bottom:0;transform:translate(-50%,50%);width:50px;height:50px;border-radius:50%;background:#cc4f2b;border:3px solid #fff;display:grid;place-items:center;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px;z-index:2;box-shadow:0 8px 18px -8px rgba(0,0,0,.4)">04</div>
+          </div>
+          <h3 style="font-family:'Merriweather Sans',sans-serif;font-weight:700;font-size:20px;color:#16181f;margin-top:36px">License Registration</h3>
+          <p style="font-size:14.5px;color:#4c515d;margin-top:10px;max-width:30ch">Full DVLA license registration — paperwork, booking and follow-up handled for you.</p>
+          <a class="qs-moreinfo qs-btn" href="Contact.dc.html" style="margin-top:18px;border:1px solid #d9d6cf;color:#46281e;font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:11px 22px">More info</a>
+        </div>
+      </div>
+
+      <div style="display:flex;justify-content:center;gap:9px;margin-top:26px">
+        <span style="width:30px;height:4px;border-radius:2px;background:#cc4f2b"></span>
+        <span style="width:30px;height:4px;border-radius:2px;background:#e7ddcf"></span>
+        <span style="width:30px;height:4px;border-radius:2px;background:#e7ddcf"></span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BAND -->
+  <section style="background:#faf8f4;padding:clamp(48px,7vh,84px) clamp(20px,5vw,64px);text-align:center">
+    <h2 style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:clamp(26px,3.4vw,38px);color:#46281e;max-width:20ch;margin:0 auto">Not sure which course is right for you?</h2>
+    <p style="font-size:17px;color:#4c515d;margin-top:16px;max-width:48ch;margin-left:auto;margin-right:auto">Call us and we'll talk you through the options, or send an enquiry and we'll get back to you.</p>
+    <div style="display:flex;gap:18px;justify-content:center;margin-top:30px;flex-wrap:wrap">
+      <a class="qs-btn" href="Contact.dc.html" style="background:#cc4f2b;color:#fff;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px">Enroll now</a>
+      <a class="qs-btn" href="tel:0233080020" style="background:#fff;border:1px solid #d9d6cf;color:#16181f;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;padding:16px 30px">Call 023 308 0020</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#341a12;color:rgba(255,255,255,.78);padding:clamp(48px,7vh,72px) clamp(20px,5vw,64px) 28px">
+    <div style="max-width:1200px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:space-between;gap:40px">
+      <div style="max-width:30ch">
+        <div style="display:flex;align-items:center;gap:11px">
+          <span style="display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:#cc4f2b;color:#fff;font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:15px">Q</span>
+          <span style="font-family:'Merriweather Sans',sans-serif;font-weight:800;font-size:18px;letter-spacing:.04em;color:#fff">Quick Start</span>
+        </div>
+        <p style="font-size:14px;margin-top:16px">Kumasi's renowned driving school for new drivers — lessons, intensive courses and full DVLA license registration.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:clamp(36px,6vw,72px)">
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#e8915f;margin-bottom:14px">Explore</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <a href="Quick Start Driving School.dc.html" style="opacity:.82">Home</a>
+            <a href="Courses.dc.html" style="opacity:.82">Courses</a>
+            <a href="About.dc.html" style="opacity:.82">About</a>
+            <a href="Contact.dc.html" style="opacity:.82">Contact</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-family:'Anonymous Pro',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:#e8915f;margin-bottom:14px">Get in touch</div>
+          <div style="display:flex;flex-direction:column;gap:10px;font-size:14px">
+            <a href="tel:0233080020" style="opacity:.82">023 308 0020</a>
+            <span style="opacity:.82">Kumasi · MCGP+6H</span>
+            <span style="opacity:.82">Open daily · Closes 5 pm</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="max-width:1200px;margin:36px auto 0;padding-top:20px;border-top:1px solid rgba(255,255,255,.12);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-family:'Anonymous Pro',monospace;font-size:11.5px;letter-spacing:.08em;color:rgba(255,255,255,.5)">
+      <span>© 2026 Quick Start Driving School · Kumasi, Ghana</span>
+      <span>4.0 ★ · 33 Google reviews</span>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  trackRef = React.createRef();
+  scroll(dir) {
+    const el = (this.base && this.base.querySelector('.qs-track')) || document.querySelector('.qs-track');
+    if (!el) return;
+    const card = el.querySelector('.qs-card');
+    const step = card ? card.getBoundingClientRect().width + 28 : 320;
+    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+  renderVals() {
+    return {
+      trackRef: this.trackRef,
+      prev: () => this.scroll(-1),
+      next: () => this.scroll(1)
+    };
+  }
+}
+</script>
+</body>
+</html>
