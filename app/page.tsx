@@ -4,39 +4,10 @@ import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import EnrollForm from '@/components/EnrollForm'
+import CourseCarousel from '@/components/CourseCarousel'
 
 export const metadata: Metadata = { title: 'Quick Start Driving School – Kumasi' }
 
-const courses = [
-  {
-    tag: 'Beginner',
-    title: 'Driving Lessons',
-    desc: 'Foundational, on-road tuition for first-time drivers: controls, handling and confidence from day one.',
-    items: ['Vehicle controls & road handling', 'Real on-road practice', 'Theory test preparation'],
-    dark: false,
-  },
-  {
-    tag: 'Most popular',
-    title: 'Intensive Course',
-    desc: 'Fast-track to test-ready in weeks with daily sessions and a structured path to your test.',
-    items: ['Daily condensed sessions', 'Mock tests included', 'Test booking assistance'],
-    dark: true,
-  },
-  {
-    tag: 'Private',
-    title: 'Exclusive Lessons',
-    desc: 'One-to-one tuition at your own pace, with hours and pickup points chosen around you.',
-    items: ['Dedicated private instructor', 'Choose your own hours', 'Door pickup available'],
-    dark: false,
-  },
-  {
-    tag: 'Licensing',
-    title: 'License Registration',
-    desc: "Full assistance registering your driver's license with the DVLA, from paperwork to follow-up.",
-    items: ['Paperwork handled for you', 'Theory & practical booking', 'Guidance to collection'],
-    dark: false,
-  },
-]
 
 const reviews = [
   {
@@ -227,72 +198,13 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ── COURSES ── */}
-      <section id="courses" className="bg-qs-cream py-[clamp(64px,9vh,108px)] px-[clamp(20px,5vw,64px)]">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="flex items-end justify-between gap-6 flex-wrap">
-            <div>
-              <div className="font-mono text-[12px] tracking-[.24em] uppercase text-qs-terracotta">
-                Our courses
-              </div>
-              <h2 className="font-heading font-extrabold text-[clamp(28px,3.6vw,40px)] leading-[1.1] mt-3.5 text-qs-brown">
-                Packages for every kind of driver
-              </h2>
-            </div>
-            <Link
-              href="/courses"
-              className="font-mono text-[12px] tracking-[.16em] uppercase text-qs-body border-b-[1.5px] border-qs-terracotta pb-1 whitespace-nowrap"
-            >
-              All courses →
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-[clamp(18px,2vw,26px)] mt-[clamp(36px,5vh,52px)]">
-            {courses.map((c) => (
-              <div
-                key={c.title}
-                className={`p-[30px_28px] flex flex-col border transition-all hover:-translate-y-1 hover:shadow-[0_22px_44px_-28px_rgba(70,40,30,.45)] ${
-                  c.dark
-                    ? 'bg-qs-brown text-white border-qs-brown'
-                    : 'bg-white text-qs-dark border-qs-border-warm'
-                }`}
-              >
-                <div
-                  className={`font-mono text-[11px] tracking-[.16em] uppercase ${
-                    c.dark ? 'text-qs-orange' : 'text-qs-terracotta'
-                  }`}
-                >
-                  {c.tag}
-                </div>
-                <h3 className="font-heading font-bold text-[21px] mt-3">{c.title}</h3>
-                <p className={`text-[14.5px] mt-3 ${c.dark ? 'text-white/[.82]' : 'text-qs-body'}`}>
-                  {c.desc}
-                </p>
-                <ul className="list-none p-0 mt-[18px] flex flex-col gap-2">
-                  {c.items.map((item) => (
-                    <li
-                      key={item}
-                      className={`flex gap-[9px] text-[14px] ${
-                        c.dark ? 'text-white/[.82]' : 'text-qs-body'
-                      }`}
-                    >
-                      <span className={c.dark ? 'text-qs-orange' : 'text-qs-terracotta'}>·</span>
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-                <Link
-                  href="#contact"
-                  className={`mt-auto pt-[22px] text-[12.5px] tracking-[.1em] uppercase font-semibold transition-all hover:-translate-y-0.5 ${
-                    c.dark ? 'text-qs-orange' : 'text-qs-brown'
-                  }`}
-                >
-                  Enquire →
-                </Link>
-              </div>
-            ))}
-          </div>
-        </div>
+      {/* ── OUR PROGRAMS ── */}
+      <section id="courses" className="bg-white py-[clamp(64px,9vh,108px)] px-[clamp(20px,5vw,64px)]">
+        <h2 className="font-heading font-extrabold text-[clamp(28px,3.6vw,40px)] text-qs-dark text-center">
+          Our Programs
+        </h2>
+        <div className="w-[54px] h-[3px] bg-qs-terracotta mx-auto mt-4" />
+        <CourseCarousel />
       </section>
 
       {/* ── REVIEWS ── */}
