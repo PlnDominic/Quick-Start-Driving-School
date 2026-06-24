@@ -3,7 +3,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ImagePlaceholder from '@/components/ImagePlaceholder'
 import EnrollForm from '@/components/EnrollForm'
 
 export const metadata: Metadata = { title: 'Quick Start Driving School – Kumasi' }
@@ -112,8 +111,8 @@ export default function HomePage() {
 
         <div className="relative overflow-hidden min-h-[280px] lg:min-h-[420px] group">
           <Image
-            src="/images/signboard.png"
-            alt="Quick Start Driving School signboard"
+            src="/images/Driving.jpg"
+            alt="Driving instructor and student in a car"
             fill
             className="object-cover object-center transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]"
             sizes="(max-width: 1024px) 100vw, 50vw"
@@ -143,9 +142,13 @@ export default function HomePage() {
           {/* image with accents */}
           <div className="relative">
             <div className="relative overflow-hidden rounded-[16px] aspect-[4/3] group">
-              <div className="absolute inset-0 transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]">
-                <ImagePlaceholder label="Drop a car / learner photo" />
-              </div>
+              <Image
+                src="/images/Driving.jpg"
+                alt="Driving instructor and student in a car"
+                fill
+                className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
             </div>
             {/* yellow road-sign */}
             <div className="absolute top-[-20px] left-[-16px] w-[58px] h-[58px] bg-qs-yellow border-[3px] border-qs-dark rounded-[9px] rotate-45 grid place-items-center shadow-[0_10px_24px_-10px_rgba(0,0,0,.4)]">
