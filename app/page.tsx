@@ -143,8 +143,8 @@ export default function HomePage() {
           <div className="relative">
             <div className="relative overflow-hidden rounded-[16px] aspect-[4/3] group">
               <Image
-                src="/images/Driving.jpg"
-                alt="Driving instructor and student in a car"
+                src="/images/Driving car.jpg"
+                alt="Student behind the wheel during a driving lesson"
                 fill
                 className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]"
                 sizes="(max-width: 1024px) 100vw, 50vw"
