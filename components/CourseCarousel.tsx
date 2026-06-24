@@ -8,7 +8,7 @@ const programs = [
   {
     id: '01',
     title: 'Driving Lessons',
-    desc: 'Foundational on-road tuition for first-time drivers — controls, handling and theory prep.',
+    desc: 'Foundational on-road tuition for first-time drivers: controls, handling and theory prep.',
     imgLabel: 'Lesson photo',
   },
   {
@@ -26,7 +26,7 @@ const programs = [
   {
     id: '04',
     title: 'License Registration',
-    desc: 'Full DVLA license registration — paperwork, booking and follow-up handled for you.',
+    desc: 'Full DVLA license registration: paperwork, booking and follow-up handled for you.',
     imgLabel: 'License / DVLA photo',
   },
 ]

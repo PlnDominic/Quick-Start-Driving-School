@@ -14,11 +14,11 @@ const values = [
   },
   {
     title: 'On your schedule',
-    desc: 'Mornings, evenings or weekends — flexible lessons that fit around real life.',
+    desc: 'Mornings, evenings or weekends: flexible lessons that fit around real life.',
   },
   {
     title: 'Delivered on time',
-    desc: 'Reliable lessons and prompt DVLA support — exactly what our reviews praise us for.',
+    desc: 'Reliable lessons and prompt DVLA support, exactly what our reviews praise us for.',
   },
 ]
 
@@ -62,8 +62,8 @@ export default function AboutPage() {
             Learning that lasts beyond the test
           </h2>
           <p className="text-[17px] text-qs-body mt-[18px]">
-            We offer a full range of packages — driving licenses, standard lessons, and intensive and
-            exclusive driving courses — with flexible schedules designed around our customers&apos;
+            We offer a full range of packages: driving licenses, standard lessons, and intensive and
+            exclusive driving courses, with flexible schedules designed around our customers&apos;
             lives. Whether you&apos;re a student fitting lessons between lectures or a professional
             learning on weekends, there&apos;s a path that works for you.
           </p>

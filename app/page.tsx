@@ -12,7 +12,7 @@ const courses = [
   {
     tag: 'Beginner',
     title: 'Driving Lessons',
-    desc: 'Foundational, on-road tuition for first-time drivers — controls, handling and confidence from day one.',
+    desc: 'Foundational, on-road tuition for first-time drivers: controls, handling and confidence from day one.',
     items: ['Vehicle controls & road handling', 'Real on-road practice', 'Theory test preparation'],
     dark: false,
   },
@@ -33,7 +33,7 @@ const courses = [
   {
     tag: 'Licensing',
     title: 'License Registration',
-    desc: "Full assistance registering your driver's license with the DVLA — from paperwork to follow-up.",
+    desc: "Full assistance registering your driver's license with the DVLA, from paperwork to follow-up.",
     items: ['Paperwork handled for you', 'Theory & practical booking', 'Guidance to collection'],
     dark: false,
   },
@@ -42,7 +42,7 @@ const courses = [
 const reviews = [
   {
     stars: 5,
-    text: '"A renowned learning centre for amateur drivers — driving licenses, lessons, intensive and exclusive courses, with flexible schedules for customers."',
+    text: '"A renowned learning centre for amateur drivers: driving licenses, lessons, intensive and exclusive courses, with flexible schedules for customers."',
     name: 'Felix Acheampong',
     meta: 'Local Guide · Google review',
   },
@@ -75,7 +75,7 @@ export default function HomePage() {
             Your road to a full license starts here.
           </h1>
           <p className="text-[18px] leading-[1.65] mt-[22px] max-w-[44ch] text-qs-body">
-            A renowned learning centre for new drivers — patient instruction, intensive courses and
+            A renowned learning centre for new drivers: patient instruction, intensive courses and
             full DVLA license registration, all on a schedule that fits your life.
           </p>
           <div className="flex items-center gap-5 mt-8 flex-wrap">
@@ -174,7 +174,7 @@ export default function HomePage() {
             <div className="flex flex-col gap-3.5 mt-7">
               {[
                 'We cover all the different test routes',
-                'Flexible schedules — more than just lessons on offer',
+                'Flexible schedules, more than just lessons on offer',
                 'Full DVLA license registration handled for you',
               ].map((item) => (
                 <div key={item} className="flex items-start gap-3">
@@ -273,7 +273,7 @@ export default function HomePage() {
                         c.dark ? 'text-white/[.82]' : 'text-qs-body'
                       }`}
                     >
-                      <span className={c.dark ? 'text-qs-orange' : 'text-qs-terracotta'}>—</span>
+                      <span className={c.dark ? 'text-qs-orange' : 'text-qs-terracotta'}>·</span>
                       {item}
                     </li>
                   ))}

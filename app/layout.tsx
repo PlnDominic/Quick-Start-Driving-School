@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     default: 'Quick Start Driving School – Kumasi',
   },
   description:
-    'A renowned learning centre for new drivers in Kumasi — patient instruction, intensive courses and full DVLA license registration.',
+    'A renowned learning centre for new drivers in Kumasi: patient instruction, intensive courses and full DVLA license registration.',
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

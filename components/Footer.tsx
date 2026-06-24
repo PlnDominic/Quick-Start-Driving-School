@@ -14,7 +14,7 @@ export default function Footer() {
             </span>
           </div>
           <p className="text-sm mt-4">
-            Kumasi's renowned driving school for new drivers — lessons, intensive courses and full
+            Kumasi's renowned driving school for new drivers: lessons, intensive courses and full
             DVLA license registration.
           </p>
         </div>
