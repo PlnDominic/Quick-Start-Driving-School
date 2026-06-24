@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import Image from 'next/image'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ImagePlaceholder from '@/components/ImagePlaceholder'
@@ -43,9 +44,14 @@ export default function AboutPage() {
           </p>
         </div>
         <div className="relative overflow-hidden min-h-[360px] group">
-          <div className="absolute inset-0 transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]">
-            <ImagePlaceholder label="Drop a photo of the school / instructor" />
-          </div>
+          <Image
+            src="/images/signboard.png"
+            alt="Quick Start Driving School signboard in Kumasi"
+            fill
+            className="object-cover transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)] group-hover:scale-[1.04]"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+          />
         </div>
       </section>
 
