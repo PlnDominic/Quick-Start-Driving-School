@@ -2,32 +2,32 @@
 
 import { useRef, useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
-import ImagePlaceholder from './ImagePlaceholder'
+import Image from 'next/image'
 
 const programs = [
   {
     id: '01',
     title: 'Driving Lessons',
     desc: 'Foundational on-road tuition for first-time drivers: controls, handling and theory prep.',
-    imgLabel: 'Lesson photo',
+    img: '/images/Driving 1.jpg',
   },
   {
     id: '02',
     title: 'Intensive Course',
     desc: 'Fast-track, daily sessions that take you from learner to test-ready in weeks.',
-    imgLabel: 'Intensive photo',
+    img: '/images/Driving 2.jpg',
   },
   {
     id: '03',
     title: 'Exclusive Lessons',
     desc: 'One-to-one tuition at your own pace, with your own hours and door pickup.',
-    imgLabel: 'Private lesson photo',
+    img: '/images/Driving 3.jpg',
   },
   {
     id: '04',
     title: 'License Registration',
     desc: 'Full DVLA license registration: paperwork, booking and follow-up handled for you.',
-    imgLabel: 'License / DVLA photo',
+    img: '/images/Driving 4.jpg',
   },
 ]
 
@@ -82,9 +82,13 @@ export default function CourseCarousel() {
             className="prog-card flex-none w-[clamp(240px,28vw,300px)] [scroll-snap-align:center] flex flex-col items-center text-center group"
           >
             <div className="relative w-full aspect-[4/3] rounded-[14px] overflow-hidden border border-qs-border-warm">
-              <div className="absolute inset-0 group-hover:scale-105 transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)]">
-                <ImagePlaceholder label={prog.imgLabel} />
-              </div>
+              <Image
+                src={prog.img}
+                alt={prog.title}
+                fill
+                className="object-cover group-hover:scale-105 transition-transform duration-[600ms] ease-[cubic-bezier(.25,.1,.25,1)]"
+                sizes="(max-width: 640px) 80vw, 300px"
+              />
               <div className="absolute left-1/2 bottom-0 translate-x-[-50%] translate-y-1/2 w-[50px] h-[50px] rounded-full bg-qs-terracotta border-[3px] border-white grid place-items-center text-white font-heading font-extrabold text-[15px] z-20 shadow-[0_8px_18px_-8px_rgba(0,0,0,.4)]">
                 {prog.id}
               </div>
